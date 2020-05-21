@@ -1,0 +1,16 @@
+<h1>Django Image Uploading</h1>
+<ul>
+  {% block raw %}
+  {% for project in object_list %}
+  <h2>{{ project.title }}</h2>
+    {% if project.image %} 
+      <img src="{{ project.image.url}}" alt="{{ project.title }}">
+    {% else %}
+      "no image"
+    {% endif %}
+  {% endfor %}
+  {% endblock %}
+</ul>
+
+
+

@@ -1,0 +1,7 @@
+<!-- profile.html -->
+<h1>Project</h1>
+{% for project in object_list %}
+  <ul>
+    <li><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></li>
+  </ul>
+{% endfor %}
